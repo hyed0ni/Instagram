@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Instagram</title>
+
+        <link rel="stylesheet" href="css/aside.css" type="text/css">
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+    </head>
+
+    <body>
+        <div class="container index">
+            <div class="aside"></div>
+
+            <div class="main">
+                <section class="news">
+                    <div class="story">
+                        <div>
+                            <div><img src="images/profile/som.jpg" alt="솜포토 프로필 이미지"></div>
+                            <div>som_photo_</div>
+                        </div>
+                        <div>
+                            <div><img src="images/profile/muwha.jpg" alt="무화의화원 프로필 이미지"></div>
+                            <div>muhwa_pic</div>
+                        </div>
+                        <!-- <div>
+                            <div><img src="images/profile/sanho.jpg" alt="산호맨숀 프로필 이미지"></div>
+                            <div>sanhomansion</div>
+                        </div>
+                        <div>
+                            <div><img src="images/profile/sanjang.jpg" alt="화월산장 프로필 이미지"></div>
+                            <div>hwaweolsanjang</div>
+                        </div>
+                        <div>
+                            <div><img src="images/profile/sultang.jpg" alt="설탕 프로필 이미지"></div>
+                            <div>sultang.jpg</div>
+                        </div> -->
+                    </div>
+
+                    <div class="post">게시글</div>
+                </section>
+            </div>
+        </div>
+
+        <script>
+            async function fetchHtmlAsText(url) {
+                return await (await fetch(url)).text();
+            }
+
+            async function importPage(target, page) {
+                document.querySelector(target).innerHTML = await fetchHtmlAsText(page);
+            }
+
+            importPage(".aside", "aside.html");
+        </script>
+    </body>
+</html>

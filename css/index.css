@@ -1,0 +1,46 @@
+/* new story, post */
+.index .news {
+    display: flex;
+    flex-direction: column;
+    width: 630px;
+    height: 100%;
+    margin-right: 64px;
+}
+
+/* story */
+.index .story {
+    display: flex;
+    height: 117px;
+    margin-top: 16px;
+    padding: 16px 0;
+    background-color: aquamarine;
+    font-size: 0.75rem;
+}
+
+.index .story > div {
+    display: flex;
+    flex-direction: column;
+    width: 74px;
+    height: 84px;
+    /* padding: 10px 15px; */
+}
+
+.index .story > div * {margin: auto;}
+
+/* story image */
+.index .story > div > div:first-child {
+    display: flex;
+    width: 66px;
+    height: 66px;
+}
+
+.index .story img {
+    width: 56px;
+    border-radius: 100%;
+}
+
+/* post */
+.index .post {
+    flex-grow: 1;
+    background-color: azure;
+}

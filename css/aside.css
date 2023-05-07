@@ -1,0 +1,175 @@
+/* common css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SUIT-Regular', sans-serif;
+    letter-spacing: 0.1px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* profile-image border */
+.profile-image > div:first-child {
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.profile-image > div:first-child::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0, .0975);
+    border-radius: 100%;
+    content: '';
+}
+
+.profile-image img {width: 100%;}
+
+/* body-container */
+.container {display: flex;}
+
+/* aside */
+.aside {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: fixed;
+    width: 335px;
+    height: 100vh;
+    padding: 8px 12px 20px;
+    border-right: 1px solid #dbdbdb;
+}
+
+/* instagram logo, icon */
+.aside header {
+    height: 90px;
+    padding: 15px 10px;
+}
+
+/* logo */
+.aside header .logo {width: 106px;}
+
+/* icons */
+.aside header .icon {display: none;}
+
+/* list */
+.aside section {flex-grow: 1;}
+
+/* img-icon */
+.aside .icon {
+    width: 24px;
+    transition-duration: 0.2s;
+}
+
+/* notify */
+.aside .notify {
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: #FF3040;
+}
+
+/* notify-msg */
+.aside .msg {
+    display: flex;
+    justify-content: center;
+    top: 280px;
+    left: 40px;
+    width: 20px;
+    height: 20px;
+    line-height: 16px;
+}
+
+.aside .msg span {
+    color: white;
+    font-size: 0.7rem;
+}
+
+/* notify-heart */
+.aside .heart {
+    position: absolute;
+    top: 340px;
+    left: 44px;
+    width: 12px;
+    height: 12px;
+}
+
+/* img-profile */
+.aside .profile-image div {
+    width: 23px;
+    height: 23px;
+}
+
+/* a-menu */
+.aside .menu {
+    padding-left: 16px;
+    line-height: 24px;
+    font-size: 1.1rem;
+    color: black;
+}
+
+/* list, footer */
+.aside li, .aside footer > div {
+    display: flex;
+    margin: 8px 4px;
+    padding: 12px;
+    font-size: 16px;
+    list-style: none;
+}
+
+/* list, footer hover */
+.aside li:hover, .aside footer > div:hover {
+    border-radius: 7px;
+    background-color: #f2f2f2;
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+/* main */
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    margin-left: 335px;
+}
+
+/* media-query */
+@media (max-width: 1919px) {
+    .aside {width: 240px;}
+    .main {margin-left: 240px;}
+}
+
+@media (max-width: 1263px) {
+    .aside {width: 80px;}
+    .aside header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .aside header .logo {display: none;}
+    .aside header .icon {display: block;}
+    .aside .menu {display: none;}
+    .main {margin-left: 80px;}
+}

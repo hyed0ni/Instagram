@@ -1,0 +1,16 @@
+.explore .feed {padding: 24px 20px;}
+
+.explore .feed-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 963px;
+}
+
+.explore .feed-row > a {width: calc(33.3333% - 2.66px);}
+
+.explore .thumbnail {width: 100%;}
+
+/* .explore .thumbnail:hover {
+    -webkit-filter: brightness(.7);
+    filter: brightness(.7);
+} */
