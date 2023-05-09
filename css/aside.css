@@ -43,7 +43,7 @@ a {
 
 .profile-image img {width: 100%;}
 
-/* body-container */
+/* body container */
 .container {display: flex;}
 
 /* aside */
@@ -73,7 +73,7 @@ a {
 /* list */
 .aside section {flex-grow: 1;}
 
-/* img-icon */
+/* img icon */
 .aside .icon {
     width: 24px;
     transition-duration: 0.2s;
@@ -82,19 +82,19 @@ a {
 /* notify */
 .aside .notify {
     position: absolute;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 100%;
     background-color: #FF3040;
 }
 
-/* notify-msg */
+/* notify msg */
 .aside .msg {
     display: flex;
     justify-content: center;
     top: 280px;
     left: 40px;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     line-height: 16px;
 }
 
@@ -103,7 +103,7 @@ a {
     font-size: 0.7rem;
 }
 
-/* notify-heart */
+/* notify heart */
 .aside .heart {
     position: absolute;
     top: 340px;
@@ -112,13 +112,13 @@ a {
     height: 12px;
 }
 
-/* img-profile */
+/* img profile */
 .aside .profile-image div {
     width: 23px;
     height: 23px;
 }
 
-/* a-menu */
+/* a menu */
 .aside .menu {
     padding-left: 16px;
     line-height: 24px;
@@ -155,7 +155,7 @@ a {
     margin-left: 335px;
 }
 
-/* media-query */
+/* media query */
 @media (max-width: 1919px) {
     .aside {width: 240px;}
     .main {margin-left: 240px;}

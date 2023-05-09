@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 
-/* profile-image, detail */
+/* profile image, detail */
 .profile .info {
     display: flex;
     min-height: 150px;
@@ -19,7 +19,7 @@
     font-size: 0.9rem;
 }
 
-/* profile-image */
+/* profile image */
 .profile .info > .profile-image {
     display: flex;
     justify-content: center;
@@ -42,7 +42,7 @@
 
 .profile .a-line {height: 18px;}
 
-/* insta-id, button, option-icon */
+/* insta id, button, option icon */
 .profile .user-id {
     display: flex;
     align-items: center;
@@ -51,7 +51,7 @@
     background-color: white;
 }
 
-/* insta-id */
+/* insta id */
 .profile .insta-id {
     margin-right: 20px;
     font-size: 1.3rem;
@@ -72,11 +72,11 @@
 
 /* blue button */
 .profile .blue {
-    background-color: #0095F6;
+    background-color: #0095f6;
     color: white;
 }
 
-.profile .blue:hover {background-color: #1877F2;}
+.profile .blue:hover {background-color: #1877f2;}
 
 /* gray button */
 .profile .gray {
@@ -84,12 +84,12 @@
     color: black;
 }
 
-.profile .gray:hover {background-color: #DBDBDB;}
+.profile .gray:hover {background-color: #dbdbdb;}
 
 /* follow button */
 .profile #flw {width: 82px;}
 
-/* follow-up button */
+/* follow up button */
 .profile #fup {width: 128px;}
 
 /* following button */
@@ -101,7 +101,7 @@
 /* edit button */
 .profile #edit {width: 106px;}
 
-/* add-user button */
+/* add user button */
 .profile #add {width: 34px;}
 
 .profile #add img {width: 16px;}
@@ -114,7 +114,7 @@
     margin-left: 5px;
 }
 
-/* option-icon */
+/* option icon */
 .profile .user-id div a {line-height: 10px;}
 
 .profile .user-id div img {width: 25px;}
@@ -174,7 +174,7 @@
 
 .profile .highlight > div {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     width: 125px;
     height: 130px;
     padding: 10px 15px;
@@ -182,19 +182,28 @@
 
 .profile .highlight > div * {margin: auto;}
 
-/* highlight-image */
-.profile .highlight > div > div:first-child {
+.profile .highlight > div > a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* highlight image */
+.profile .highlight > div div:first-child {
     display: flex;
     width: 87px;
     height: 87px;
 }
 
-/* highlight-name */
-.profile .highlight > div > div:last-child {
-    display: flex;
-    align-items: center;
+/* highlight name */
+.profile .highlight > div div:last-child {
     flex-grow: 1;
+    width: 100%;
+    text-align: center;
     line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .profile .highlight img {
@@ -224,7 +233,7 @@
     height: 196px;
 }
 
-/* recommend-card */
+/* recommend card */
 .profile .card {
     display: flex;
     flex-direction: column;
@@ -248,10 +257,7 @@
     margin-bottom: 20px;
 }
 
-.profile .card > div:nth-child(1) img {
-    border: 0.5px solid #dbdbdb;
-    border-radius: 100%;
-}
+.profile .card > div:nth-child(1) img {border-radius: 100%;}
 
 /* recommend id, name */
 .profile .card > div:nth-child(2) {
@@ -261,14 +267,14 @@
 }
 
 .profile .card > div:nth-child(2) * {
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 .profile .card > div:nth-child(2) > div:first-child {font-weight: bold;}
 
-/* follow-button */
+/* follow button */
 .profile .card .button {
     display: flex;
     justify-content: center;
@@ -276,13 +282,11 @@
     width: 82px;
     height: 32px;
     border-radius: 8px;
-    /* background-color: #0095F6; */
     font-size: 0.9rem;
     font-weight: bold;
-    /* color: white; */
 }
 
-/* header-recommend */
+/* header recommend */
 .profile .introduce .recommend {
     margin: -16px 0 28px;
     padding: 20px 0;
@@ -290,7 +294,7 @@
     border-radius: 5px;
 }
 
-.profile .introduce .recommend > div > a {color: #0095F6;}
+.profile .introduce .recommend > div > a {color: #0095f6;}
 
 .profile .introduce .x {
     position: relative;
@@ -380,7 +384,7 @@
     width: 62px;
 }
 
-/* posts-recommend */
+/* posts recommend */
 .profile .posts .recommend {padding: 40px 0;}
 
 /* policy */
