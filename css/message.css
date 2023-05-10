@@ -1,0 +1,258 @@
+.message .main > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+/* message box */
+.message .box {
+    display: flex;
+    width: 100%;
+    max-width: 935px;
+    height: 100%;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+}
+
+.message .icon {width: 24px;}
+
+/* box left */
+.message .left {
+    display: flex;              /*  */
+    flex-direction: column;     /*  */
+    width: 350px;
+    border-right: 1px solid #dbdbdb;
+}
+
+.message .left > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.message .left > div:nth-child(1) a {position: relative;}
+
+.message .left > div:nth-child(1) img {
+    position: absolute;
+    bottom: -12px;
+    left: 85px;
+}
+
+.message .left > div:nth-child(2) {
+    display: flex;
+    height: 45px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.message .left > div:nth-child(2) a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    height: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.message .left > div:nth-child(2) > div:first-child {border-bottom: 1px solid black;}
+
+.message .left > div:nth-child(2) > div:last-child > a {color: #b2b2b2;}
+
+/* message room */
+.message .left > div:nth-child(3) {padding-top: 8px;}
+
+.message .msg-room {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    padding: 8px 20px;
+}
+
+.message .msg-room:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+.message .msg-room .profile-image > div {
+    width: 56px;
+    height: 56px;
+}
+
+.message .msg-room > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 240px;
+}
+
+.message .msg-room > div:last-child > div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.95rem;
+}
+
+.message .msg-room > div:last-child > div:last-child {color: #737373;}
+
+/* box right-intro */
+.message .right-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* intro */
+.message .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message .intro > div:nth-child(1) {height: 96px;}
+
+.message .intro > div:nth-child(2) {
+    margin-top: 16px;
+    font-size: 1.3rem;
+}
+
+.message .intro > div:nth-child(3) {
+    margin-top: 5px;
+    font-size: 0.95rem;
+    color: #737373;
+}
+
+.message .intro .circle {
+    width: 96px;
+    height: 100%;
+    border: 3px solid black;
+    border-radius: 100%;
+}
+
+.message .intro img {
+    position: relative;
+    left: 24px;
+    bottom: 66px;
+    width: 45px;
+}
+
+.message .intro .button {margin-top: 24px;}
+
+.message #msg {width: 120px;}
+
+.message #move {width: 150px;}
+
+/* chat-window */
+.message .right-chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.message .chat-name {
+    display: flex;
+    justify-content: flex-start;
+    height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.message .chat-name .profile-image > div {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+.message .chat-name > div:nth-child(2) {margin-left: 12px;}
+
+.message .chat-name > div:nth-child(3) {margin-left: auto;}
+
+/* chat window output */
+.message .chat-window > div:first-child {
+    overflow: auto;
+    max-height: 1105px;
+    padding: 20px 20px 0 20px;
+}
+
+/* chat datetime */
+.message .datetime {
+    height: 50px;
+    padding-top: 12px;
+    font-size: 0.8rem;
+    color: #737373;
+    text-align: center;
+}
+
+/* receive message */
+.message .output {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.message .output > div:last-child {
+    max-width: 365px;
+    padding: 16px;
+    border-radius: 20px;
+}
+
+.message .receive .profile-image > div {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.message .receive > div:last-child {border: 1px solid #efefef;}
+
+/* sent message */
+.message .sent {justify-content: flex-end;}
+
+.message .sent > div:last-child {background-color: #efefef;}
+
+/* chat window input */
+.message .chat-window > div:last-child {
+    height: 84px;
+    padding: 20px;
+}
+
+.message .input {
+    display: flex;
+    height: 100%;
+    border: 1px solid #dbdbdb;
+    border-radius: 25px;
+}
+
+.message .input form {
+    flex-grow: 1;
+    margin-left: 18px;
+}
+
+.message .input textarea {
+    width: 100%;
+    height: 34px;
+    padding: 8px 9px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.message .input div {
+    width: 40px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.message .input div:last-child {margin-right: 8px;}

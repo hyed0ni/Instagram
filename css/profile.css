@@ -58,34 +58,6 @@
     color: black;
 }
 
-/* button */
-.profile .user-id .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 32px;
-    margin-left: 8px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-/* blue button */
-.profile .blue {
-    background-color: #0095f6;
-    color: white;
-}
-
-.profile .blue:hover {background-color: #1877f2;}
-
-/* gray button */
-.profile .gray {
-    background-color: #EFEFEF;
-    color: black;
-}
-
-.profile .gray:hover {background-color: #dbdbdb;}
-
 /* follow button */
 .profile #flw {width: 82px;}
 

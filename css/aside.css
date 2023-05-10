@@ -40,6 +40,34 @@ a {
 
 .profile-image img {width: 100%;}
 
+/* button */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    margin-left: 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* blue button */
+.blue {
+    background-color: #0095f6;
+    color: white;
+}
+
+.blue:hover {background-color: #1877f2;}
+
+/* gray button */
+.profile .gray {
+    background-color: #EFEFEF;
+    color: black;
+}
+
+.gray:hover {background-color: #dbdbdb;}
+
 /* body container */
 .container {display: flex;}
 

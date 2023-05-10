@@ -63,7 +63,6 @@
 }
 
 .index .posts > div {
-    display: flex;
     max-width: 470px;
     margin-top: 16px;
 }
@@ -162,7 +161,10 @@
 
 .index .ps .footer > div:nth-child(1) > div:last-child {margin-left: auto;}
 
-.index .ps .footer > div:nth-child(1) img {width: 24px;}
+.index .ps .footer > div:nth-child(1) img {
+    width: 24px;
+    height: 97%;
+}
 
 .index .ps .footer > div:nth-child(1) > div:first-child img {
     width: 110%;
