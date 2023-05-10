@@ -22,8 +22,6 @@
 
 /* box left */
 .message .left {
-    display: flex;              /*  */
-    flex-direction: column;     /*  */
     width: 350px;
     border-right: 1px solid #dbdbdb;
 }
@@ -112,7 +110,6 @@
     flex-grow: 1;
 }
 
-/* intro */
 .message .intro {
     display: flex;
     flex-direction: column;
@@ -152,7 +149,7 @@
 
 .message #move {width: 150px;}
 
-/* chat-window */
+/* box right-chat */
 .message .right-chat {
     display: flex;
     flex-direction: column;
@@ -163,6 +160,7 @@
 .message .chat-name {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     height: 60px;
     padding: 0 20px;
     border-bottom: 1px solid #dbdbdb;
@@ -180,7 +178,9 @@
 
 .message .chat-name > div:nth-child(3) {margin-left: auto;}
 
-/* chat window output */
+.message .chat-name > div:nth-child(3) > a {display: flex;}
+
+/* chat-window output */
 .message .chat-window > div:first-child {
     overflow: auto;
     max-height: 1105px;
@@ -222,7 +222,7 @@
 
 .message .sent > div:last-child {background-color: #efefef;}
 
-/* chat window input */
+/* chat-window input */
 .message .chat-window > div:last-child {
     height: 84px;
     padding: 20px;
@@ -236,6 +236,8 @@
 }
 
 .message .input form {
+    display: flex;
+    align-items: center;
     flex-grow: 1;
     margin-left: 18px;
 }
@@ -250,9 +252,117 @@
 }
 
 .message .input div {
+    display: flex;
     width: 40px;
+    margin: auto;
     padding: 8px;
     cursor: pointer;
 }
 
 .message .input div:last-child {margin-right: 8px;}
+
+/* box right-info */
+.message .right-info {
+    flex-grow: 1;
+    font-size: 0.95rem;
+}
+
+.message .right-info > * {padding: 0 16px;}
+
+.message .right-info > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.message .right-info > div:nth-child(1) a {position: relative;}
+
+.message .right-info > div:nth-child(1) img {
+    position: absolute;
+    bottom: -12px;
+    left: 218px;
+}
+
+.message .right-info > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.message .right-info > div:nth-child(2) label {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.message .right-info > div:nth-child(3) {border-bottom: 1px solid #dbdbdb;}
+
+.message .right-info > div:nth-child(3) > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    margin-top: 16px;
+}
+
+.message #move {
+    width: 60px;
+    cursor: pointer;
+}
+
+.message .right-info > div:nth-child(3) > div:last-child {
+    height: 40px;
+    margin: 16px 0;
+    color: #737373;
+}
+
+.message .right-info > div:nth-child(4) {
+    padding: 16px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.message .right-info > div:nth-child(4) > span {
+    margin: 8px 0;
+    padding: 0 16px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.message .right-info > div:nth-child(4) > a {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    padding: 8px 16px 0;
+}
+
+.message .right-info > div:nth-child(4) > a:hover {
+    background-color: #f2f2f2;
+    transition-duration: 0.1s;
+}
+
+.message .right-info .profile-image > div {
+    width: 56px;
+    height: 56px;
+    margin-right: 12px;
+}
+
+.message .right-info .bold {font-weight: bold;}
+
+.message .right-info > div:nth-child(5) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 150px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.message .right-info > div:nth-child(5) a {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #ed4956;
+}
