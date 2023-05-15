@@ -259,19 +259,21 @@
 }
 
 /* header recommend */
-.profile .introduce .recommend {
+.profile .recommend {
     margin: -16px 0 28px;
     padding: 20px 0;
     border: 1.5px solid #dbdbdb;
     border-radius: 5px;
 }
 
-.profile .introduce .recommend > div > a {color: #0095f6;}
+.profile .recommend > div > a {color: #0095f6;}
+
+.profile .recommend > div:last-child > div > a {position: relative;}
 
 .profile .introduce .x {
-    position: relative;
+    position: absolute;
     left: 140px;
-    bottom: 196px;
+    bottom: 162px;
     width: 34px;
     padding: 12px;
 }
@@ -313,10 +315,21 @@
     justify-content: space-between;
 }
 
-.profile .feed-row > a {width: calc(33.3333% - 2.66px);}
+.profile .feed-row > a {
+    position: relative;
+    width: calc(33.3333% - 2.66px);
+}
 
 /* thumbnail */
-.profile .thumbnail {width: 100%;}
+.profile .feed-row .thumbnail {width: 100%;}
+
+.profile .feed-row .icon {
+    position: absolute;
+    right: 0px;
+    width: 22px;
+    margin: 8px;
+    filter: invert(100%);
+}
 
 /* private */
 .profile .private {

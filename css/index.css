@@ -127,10 +127,12 @@
 
 .index .ps > div:nth-child(2) > div {height: 0;}
 
+.index .ps > div:nth-child(2) > div a {position: relative;}
+
 .index .ps > div:nth-child(2) > div img {
-    position: relative;
+    position: absolute;
     left: 13px;
-    bottom: 47px;
+    bottom: 18px;
     width: 28px;
     padding: 7px;
     border-radius: 100%;

@@ -61,9 +61,18 @@
     font-weight: bold;
 }
 
+/* temp */
 .message .left > div:nth-child(2) > div:first-child {border-bottom: 1px solid black;}
 
-.message .left > div:nth-child(2) > div:last-child > a {color: #b2b2b2;}
+.message .left > div:nth-child(2) .request {flex-grow: 1;}
+
+.message .left > div:nth-child(2) .request a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    text-align: right;
+    color: #0095f6;
+}
 
 /* message room */
 .message .left > div:nth-child(3) {padding-top: 8px;}
@@ -71,8 +80,18 @@
 .message .msg-room {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 72px;
     padding: 8px 20px;
+}
+
+/* temp */
+.message .msg-room .temp {width: 220px !important;}
+
+/* temp */
+.message .msg-room .temp > * {
+    font-weight: bold;
+    color: black !important;
 }
 
 .message .msg-room:hover {
@@ -86,21 +105,35 @@
     height: 56px;
 }
 
-.message .msg-room > div:last-child {
+.message .msg-room > div:nth-child(2) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 240px;
 }
 
-.message .msg-room > div:last-child > div {
+.message .msg-room > div:nth-child(2) > div {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 0.95rem;
 }
 
-.message .msg-room > div:last-child > div:last-child {color: #737373;}
+.message .msg-room > div:nth-child(2) > div:last-child {color: #737373;}
+
+.message .msg-room .notify {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #0095f6;
+}
+
+/* msg-request */
+.message .msg-request > div:first-child {
+    padding: 14px;
+    font-size: 0.8rem;
+    color: #737373;
+}
 
 /* box right-intro */
 .message .right-intro {
@@ -116,7 +149,10 @@
     align-items: center;
 }
 
-.message .intro > div:nth-child(1) {height: 96px;}
+.message .intro > div:nth-child(1) {
+    position: relative;
+    height: 96px;
+}
 
 .message .intro > div:nth-child(2) {
     margin-top: 16px;
@@ -127,6 +163,7 @@
     margin-top: 5px;
     font-size: 0.95rem;
     color: #737373;
+    text-align: center;
 }
 
 .message .intro .circle {
@@ -137,17 +174,22 @@
 }
 
 .message .intro img {
-    position: relative;
+    position: absolute;
     left: 24px;
-    bottom: 66px;
+    bottom: 24px;
     width: 45px;
 }
 
 .message .intro .button {margin-top: 24px;}
 
-.message #msg {width: 120px;}
+.message .intro #msg {width: 120px;}
 
-.message #move {width: 150px;}
+.message .intro #move {width: 150px;}
+
+.message .intro #hide {
+    left: 26px;
+    bottom: 26px;
+}
 
 /* box right-chat */
 .message .right-chat {
@@ -187,7 +229,6 @@
     padding: 20px 20px 0 20px;
 }
 
-/* chat datetime */
 .message .datetime {
     height: 50px;
     padding-top: 12px;
@@ -196,39 +237,54 @@
     text-align: center;
 }
 
-/* receive message */
 .message .output {
     display: flex;
     align-items: flex-end;
     margin-bottom: 10px;
 }
 
-.message .output > div:last-child {
+.message .output .chat {
     max-width: 365px;
     padding: 16px;
     border-radius: 20px;
 }
 
+.message .output .heart {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #efefef;
+}
+
+.message .output .heart img {
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    width: 14px;
+}
+
+/* receive message */
 .message .receive .profile-image > div {
     width: 24px;
     height: 24px;
     margin-right: 10px;
 }
 
-.message .receive > div:last-child {border: 1px solid #efefef;}
+.message .receive .chat {border: 1px solid #efefef;}
 
 /* sent message */
 .message .sent {justify-content: flex-end;}
 
-.message .sent > div:last-child {background-color: #efefef;}
+.message .sent .chat {background-color: #efefef;}
 
 /* chat-window input */
-.message .chat-window > div:last-child {
+.message .input {
     height: 84px;
     padding: 20px;
 }
 
-.message .input {
+.message .input > div {
     display: flex;
     height: 100%;
     border: 1px solid #dbdbdb;
@@ -251,7 +307,7 @@
     resize: none;
 }
 
-.message .input div {
+.message .input > div > div {
     display: flex;
     width: 40px;
     margin: auto;
@@ -259,7 +315,57 @@
     cursor: pointer;
 }
 
-.message .input div:last-child {margin-right: 8px;}
+.message .input > div > div:last-child {margin-right: 8px;}
+
+/* chat-window req */
+.message .req {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.message .req > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 115px;
+    padding: 16px;
+    border-top: 1px solid #dbdbdb;
+    background-color: #fafafa;
+}
+
+.message .req > div:first-child > div:nth-child(1) > span {font-weight: bold;}
+
+.message .req > div:first-child > div:nth-child(2) {color: #737373;}
+
+.message .req > div:first-child > div:nth-child(3) {
+    margin-top: auto;
+    font-size: 0.8rem;
+    color: #737373;
+}
+
+.message .req > div:last-child {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #dbdbdb;
+}
+
+.message .req > div:last-child > div {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    font-weight: bold;
+}
+
+.message .req > div:last-child > div:not(:last-child) {border-right: 1px solid #dbdbdb;}
+
+.message .req > div:last-child > div:not(:last-child) a {color: #ed4956;}
 
 /* box right-info */
 .message .right-info {
@@ -310,7 +416,7 @@
     margin-top: 16px;
 }
 
-.message #move {
+.message .right-info #move {
     width: 60px;
     cursor: pointer;
 }
