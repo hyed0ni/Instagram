@@ -1,77 +1,7 @@
-/* common css */
-@font-face {
-    font-family: 'SUIT-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'SUIT-Regular', sans-serif;
-    letter-spacing: 0.1px;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-/* profile-image border */
-.profile-image > div:first-child {
-    position: relative;
-    border-radius: 100%;
-    overflow: hidden;
-}
-
-.profile-image > div:first-child::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    border: 1px solid rgba(0,0,0, .0975);
-    border-radius: 100%;
-    content: '';
-}
-
-.profile-image img {width: 100%;}
-
-/* button */
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 32px;
-    margin-left: 8px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-/* blue button */
-.blue {
-    background-color: #0095f6;
-    color: white;
-}
-
-.blue:hover {background-color: #1877f2;}
-
-/* gray button */
-.gray {
-    background-color: #EFEFEF;
-    color: black;
-}
-
-.gray:hover {background-color: #dbdbdb;}
-
-/* body container */
-.container {display: flex;}
-
-/* aside */
+/* 
+    aside.html 공통 css
+    동일한 문서 내 모든 선택자 앞에 .aside 명시
+*/
 .aside {
     display: flex;
     flex-direction: column;
@@ -83,30 +13,57 @@ a {
     border-right: 1px solid #dbdbdb;
 }
 
-/* instagram logo, icon */
+/* 헤더: 인스타그램 로고, 아이콘 */
 .aside header {
     height: 90px;
     padding: 15px 10px;
 }
 
-/* logo */
+/* 인스타그램 로고 (default) */
 .aside header .logo {width: 106px;}
 
-/* icons */
+/* 인스타그램 아이콘 (반응형) */
 .aside header .icon {display: none;}
 
-/* list */
-.aside section {flex-grow: 1;}
-
-.aside section .notify-icon {position: relative;}
-
-/* img icon */
+/* 메뉴 아이콘 (공통) */
 .aside .icon {
     width: 24px;
     transition-duration: 0.2s;
 }
 
-/* notify */
+/* 섹션: 메뉴 바 */
+.aside section {flex-grow: 1;}
+
+/* 섹션, 푸터 메뉴 리스트 */
+.aside li, .aside footer > div {
+    display: flex;
+    margin: 8px 4px;
+    padding: 12px;
+    font-size: 16px;
+    list-style: none;
+}
+
+/* 섹션, 푸터 메뉴 리스트 hover */
+.aside li:hover, .aside footer > div:hover {
+    border-radius: 7px;
+    background-color: #f2f2f2;
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+/* 메뉴 리스트 이름 */
+.aside .menu {
+    padding-left: 16px;
+    line-height: 24px;
+    font-size: 1.1rem;
+    color: black;
+}
+
+/* 메시지, 알림 메뉴 */
+.aside section .notify-icon {position: relative;}
+
+/* 빨간 점 알림 표시: 모든 알림 */
 .aside .notify {
     position: absolute;
     border: 1px solid white;
@@ -114,7 +71,7 @@ a {
     background-color: #FF3040;
 }
 
-/* notify msg */
+/* 빨간 점 알림: 메시지 */
 .aside .msg {
     display: flex;
     justify-content: center;
@@ -125,12 +82,13 @@ a {
     line-height: 16px;
 }
 
+/* 메시지 숫자 표시 */
 .aside .msg span {
     color: white;
     font-size: 0.7rem;
 }
 
-/* notify heart */
+/* 빨간 점 알림: 좋아요, 댓글 등 */
 .aside .heart {
     position: absolute;
     top: 10px;
@@ -139,50 +97,13 @@ a {
     height: 12px;
 }
 
-/* img profile */
+/* 프로필 메뉴 div */
 .aside .profile-image div {
     width: 23px;
     height: 23px;
 }
 
-/* a menu */
-.aside .menu {
-    padding-left: 16px;
-    line-height: 24px;
-    font-size: 1.1rem;
-    color: black;
-}
-
-/* list, footer */
-.aside li, .aside footer > div {
-    display: flex;
-    margin: 8px 4px;
-    padding: 12px;
-    font-size: 16px;
-    list-style: none;
-}
-
-/* list, footer hover */
-.aside li:hover, .aside footer > div:hover {
-    border-radius: 7px;
-    background-color: #f2f2f2;
-    font-weight: bold;
-    cursor: pointer;
-    transition-duration: 0.2s;
-}
-
-/* main */
-.main {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
-    margin-left: 335px;
-}
-
-/* media query */
+/* 미디어 쿼리 */
 @media (max-width: 1919px) {
     .aside {width: 240px;}
     .main {margin-left: 240px;}

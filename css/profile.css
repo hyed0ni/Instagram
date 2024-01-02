@@ -1,17 +1,18 @@
-.profile li {list-style: none;}
+/* 동일한 문서 내 모든 선택자 앞에 .profile 명시 */
 
+/* 헤더, 메인 */
 .profile .main > div {
     max-width: 975px;
     padding: 30px 20px 0;
 }
 
-/* header */
+/* 헤더: 계정 소개 */
 .profile .introduce {
     display: flex;
     flex-direction: column;
 }
 
-/* profile image, detail */
+/* 프로필 이미지, 상세 소개 */
 .profile .info {
     display: flex;
     min-height: 150px;
@@ -19,7 +20,7 @@
     font-size: 0.9rem;
 }
 
-/* profile image */
+/* 프로필 이미지 */
 .profile .info > .profile-image {
     display: flex;
     justify-content: center;
@@ -33,16 +34,14 @@
     height: 150px;
 }
 
-/* detail */
+/* 상세 소개 */
 .profile .detail {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
 }
 
-.profile .a-line {height: 18px;}
-
-/* insta id, button, option icon */
+/* 아이디, 팔로우,메시지 버튼 등 */
 .profile .user-id {
     display: flex;
     align-items: center;
@@ -51,33 +50,14 @@
     background-color: white;
 }
 
-/* insta id */
+/* 아이디 */
 .profile .insta-id {
     margin-right: 20px;
     font-size: 1.3rem;
     color: black;
 }
 
-/* follow button */
-.profile #flw {width: 82px;}
-
-/* follow up button */
-.profile #fup {width: 128px;}
-
-/* following button */
-.profile #flg {width: 98px;}
-
-/* message button */
-.profile #msg {width: 120px;}
-
-/* edit button */
-.profile #edit {width: 106px;}
-
-/* add user button */
-.profile #add {width: 34px;}
-
-.profile #add img {width: 16px;}
-
+/* 팔로우, 메시지 버튼 등 */
 .profile .user-id div {
     display: flex;
     justify-content: center;
@@ -86,12 +66,37 @@
     margin-left: 5px;
 }
 
-/* option icon */
-.profile .user-id div a {line-height: 10px;}
+/* 팔로우 버튼 */
+.profile #flw {width: 82px;}
 
+/* 맞팔로우 버튼 */
+.profile #fup {width: 128px;}
+
+/* 팔로잉 버튼 */
+.profile #flg {width: 98px;}
+
+/* 메시지 버튼 */
+.profile #msg {width: 120px;}
+
+/* 프로필 편집 버튼 */
+.profile #edit {width: 106px;}
+
+/* 추천 계정 버튼 */
+.profile #add {width: 34px;}
+
+/* 추천 계정 버튼 아이콘 */
+.profile #add img {width: 16px;}
+
+/* 추천 계정, 옵션, 설정 아이콘 */
 .profile .user-id div img {width: 25px;}
 
-/* posts, follower, follow */
+/* 옵션, 설정 아이콘 */
+.profile .user-id div a {line-height: 10px;}
+
+/* ???? */
+.profile .a-line {height: 18px;}
+
+/* 게시물, 팔로워, 팔로우 수 */
 .profile .data {
     display: flex;
     margin-bottom: 20px;
@@ -100,6 +105,7 @@
 .profile .data li {
     display: inline;
     margin-right: 40px;
+    list-style: none;
     font-size: 1.1rem;
 }
 
@@ -111,22 +117,22 @@
 
 .profile .data a {color: black;}
 
-/* name */
+/* 이름 */
 .profile .name {font-weight: bold;}
 
-/* category */
+/* 카테고리 */
 .profile .category {color: #737373;}
 
-/* letter */
+/* 소개 */
 .profile .letter {width: 615px;}
 
-/* link */
+/* 링크 */
 .profile .link a {
     font-weight: bold;
     color: #00376b;
 }
 
-/* follow-with */
+/* 팔로우하는 이웃 */
 .profile .follow-with {
     height: 25px;
     font-size: 0.8rem;
@@ -135,7 +141,7 @@
 
 .profile .follow-with .neighbor {font-weight: bold;}
 
-/* highlight */
+/* 스토리 하이라이트 */
 .profile .highlight {
     display: flex;
     height: 130px;
@@ -144,6 +150,7 @@
     font-weight: bold;
 }
 
+/* 하이라이트 그룹 */
 .profile .highlight > div {
     display: flex;
     /* flex-direction: column; */
@@ -160,14 +167,19 @@
     width: 100%;
 }
 
-/* highlight image */
+/* 하이라이트 이미지 */
 .profile .highlight > div div:first-child {
     display: flex;
     width: 87px;
     height: 87px;
 }
 
-/* highlight name */
+.profile .highlight img {
+    width: 77px;
+    border-radius: 100%;
+}
+
+/* 하이라이트 이름 */
 .profile .highlight > div div:last-child {
     flex-grow: 1;
     width: 100%;
@@ -178,13 +190,14 @@
     text-overflow: ellipsis;
 }
 
-.profile .highlight img {
-    width: 77px;
-    border-radius: 100%;
+/* 추천 계정 */
+.profile .recommend {
+    height: 278px;
+    margin: -16px 0 28px;
+    padding: 20px 0;
+    border: 1.5px solid #dbdbdb;
+    border-radius: 5px;
 }
-
-/* recommend */
-.profile .recommend {height: 278px;}
 
 .profile .recommend > div:first-child {
     display: flex;
@@ -195,17 +208,19 @@
     color: #737373;
 }
 
+.profile .recommend > div > a {color: #0095f6;}
+
 .profile .recommend > div:last-child {
     display: flex;
     justify-content: space-around;
 }
 
+/* 추천 계정 카드 */
 .profile .recommend > div:last-child > div {
     width: 174px;
     height: 196px;
 }
 
-/* recommend card */
 .profile .card {
     display: flex;
     flex-direction: column;
@@ -222,7 +237,7 @@
     text-align: center;
 }
 
-/* recommend profile-image */
+/* 추천 계정: 프로필 이미지 */
 .profile .card > div:nth-child(1) {
     width: 54px;
     height: 54px;
@@ -231,7 +246,7 @@
 
 .profile .card > div:nth-child(1) img {border-radius: 100%;}
 
-/* recommend id, name */
+/* 추천 계정: 아이디, 이름 */
 .profile .card > div:nth-child(2) {
     flex-grow: 1;
     width: 100%;
@@ -244,9 +259,10 @@
     text-overflow: ellipsis;
 }
 
+/* 추천 계정: 아이디 */
 .profile .card > div:nth-child(2) > div:first-child {font-weight: bold;}
 
-/* follow button */
+/* 추천 계정: 팔로우 버튼 */
 .profile .card .button {
     display: flex;
     justify-content: center;
@@ -258,19 +274,11 @@
     font-weight: bold;
 }
 
-/* header recommend */
-.profile .recommend {
-    margin: -16px 0 28px;
-    padding: 20px 0;
-    border: 1.5px solid #dbdbdb;
-    border-radius: 5px;
-}
-
-.profile .recommend > div > a {color: #0095f6;}
-
+/* 추천 계정 삭제 아이콘 */
 .profile .recommend > div:last-child > div > a {position: relative;}
 
-.profile .introduce .x {
+/* 추천 계정 삭제 아이콘 이미지 */
+.profile .recommend .x {
     position: absolute;
     left: 140px;
     bottom: 162px;
@@ -278,14 +286,14 @@
     padding: 12px;
 }
 
-/* posts */
+/* 메인: 게시물 피드 */
 .profile hr {
     height: 1px;
     border-width: 0;
     background: #dadde1;
 }
 
-/* posts tab-menu */
+/* 게시물 피드 탭 메뉴 */
 .profile .tab-menu {
     display: flex;
     justify-content: center;
@@ -309,7 +317,7 @@
     width: 12px;
 }
 
-/* feed-row */
+/* 피드 */
 .profile .feed-row {
     display: flex;
     justify-content: space-between;
@@ -320,9 +328,10 @@
     width: calc(33.3333% - 2.66px);
 }
 
-/* thumbnail */
+/* 썸네일 이미지 */
 .profile .feed-row .thumbnail {width: 100%;}
 
+/* 게시물 고정 아이콘 */
 .profile .feed-row .icon {
     position: absolute;
     right: 0px;
@@ -331,20 +340,7 @@
     filter: invert(100%);
 }
 
-/* private */
-.profile .private {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    padding: 40px;
-    border: 1px solid #efefef;
-    border-radius: 2px;
-    font-size: 0.9rem;
-    text-align: center;
-    line-height: 36px;
-}
-
+/* 게시물 없음 */
 .profile .no-posts {
     display: flex;
     flex-direction: column;
@@ -352,6 +348,8 @@
     align-items: center;
     height: 300px;
 }
+
+.profile .no-posts img {width: 62px;}
 
 .profile .no-posts > div:nth-child(2) {
     margin-top: 20px;
@@ -365,35 +363,19 @@
     font-size: 0.9rem;
 }
 
-.profile .no-posts img {
-    width: 62px;
-}
-
-/* posts recommend */
-.profile .posts .recommend {padding: 40px 0;}
-
-/* policy */
-.profile .policy {
+/* 비공개 계정 */
+.profile .private {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 17px 0 52px;
-    padding: 0px 20px;
-}
-
-.profile .policy * {
-    font-size: 0.8rem;
-    color: #737373;
-}
-
-.profile .policy div:first-child {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    height: 150px;
+    padding: 40px;
+    border: 1px solid #efefef;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 36px;
 }
 
-.profile .policy div:last-child {margin: 12px 0;}
-
-.profile .policy a {margin: 0 8px 8px;}
-
-.profile .policy a:hover {text-decoration: underline;}
+/* 게시물 피드 -> 추천 계정 */
+.profile .posts .recommend {padding: 40px 0;}

@@ -1,3 +1,5 @@
+/* 동일한 문서 내 모든 선택자 앞에 .explore 명시 */
+
 .explore .feed {padding: 24px 20px;}
 
 .explore .feed-row {
