@@ -1,0 +1,59 @@
+/* 동일한 문서 내 모든 선택자 앞에 .settings 명시 */
+
+.settings .main > div {width: 100%;}
+
+.settings .main h1 {
+    margin: 24px 0 0 24px;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+/* settings box */
+.settings .box {
+    display: flex;
+    max-width: 975px;
+    /*  */
+    height: 100%;
+    margin-top: 30px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+
+/* box ul */
+.settings .box ul {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    border-right: 1px solid #dbdbdb;
+}
+
+.settings .box li {
+    height: 45px;
+    padding: 16px 16px 16px 30px;
+    font-size: 0.95rem;
+    list-style: none;
+}
+
+/* temp */
+.settings .box li:first-child {
+    border-left: 2px solid black;
+    font-weight: bold;
+}
+
+.settings .box li:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+/* box article */
+.settings article {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings article > div:first-child {padding: 32px 0 0 45px;}
+
+.settings article h2 {
+    font-size: 1.6rem;
+    font-weight: normal;
+}

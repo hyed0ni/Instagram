@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- 파비콘 -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>프로필 편집 • Instagram</title>
+
+        <link rel="stylesheet" href="css/common.css" type="text/css">
+        <link rel="stylesheet" href="css/aside.css" type="text/css">
+        <link rel="stylesheet" href="css/settings.css" type="text/css">
+    </head>
+
+    <body>
+        <div class="container settings">
+            <div class="aside"></div>
+
+            <div class="main">
+                <div>
+                    <h1>설정</h1>
+    
+                    <div class="box">
+                        <ul>
+                            <li><a href="#">프로필 편집</a></li>
+                            <li><a href="#">개인정보</a></li>
+                            <li><a href="#">비밀번호 및 보안</a></li>
+                            <li><a href="#">프로페셔널 계정</a></li>
+                            <li><a href="#">이메일 알림</a></li>
+                            <li><a href="#">푸시 알림</a></li>
+                            <li><a href="#">내가 볼 수 있는 내용</a></li>
+                            <li><a href="#">내 콘텐츠를 볼 수 있는 사람</a></li>
+                            <li><a href="#">다른 사람이 나와 소통할 수 있는 방법</a></li>
+                            <li><a href="#">도움말</a></li>
+                        </ul>
+
+                        <article>
+                            <div><h2>프로필 편집</h2></div>
+                            <div></div>
+                            <form></form>
+                        </article>
+                    </div>
+                </div>
+
+                <footer class="policy">
+                    <div>
+                        <a href="https://about.meta.com/" target="_blank" alt="Meta">Meta</a>
+                        <a href="https://about.instagram.com/" target="_blank" alt="About Instagram">소개</a>
+                        <a href="https://about.instagram.com/blog" target="_blank" alt="Instagram Blog">블로그</a>
+                        <a href="https://about.instagram.com/about-us/careers" alt="Instagram Careers & Jobs">채용 정보</a>
+                        <a href="https://help.instagram.com/" target="_blank" alt="Help Center">도움말</a>
+                        <a href="https://developers.facebook.com/docs/instagram" target="_blank" alt="Instagram 플랫폼">API</a>
+                        <a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect" alt="Meta 개인정보처리방침">개인정보처리방침</a>
+                        <a href="https://help.instagram.com/581066165581870/" alt="이용 약관">약관</a>
+                        <a href="https://www.instagram.com/directory/profiles/" alt="프로필 디렉터리">인기 계정</a>
+                        <a href="https://www.instagram.com/explore/locations/" alt="국가">위치</a>
+                        <a href="https://www.instagram.com/web/lite/" alt="Instagram Lite">Instagram Lite</a>
+                        <a href="https://www.facebook.com/help/instagram/261704639352628" alt="Meta 제품을 사용하지 않는 사람을 위한 정보">연락처 업로드 & 비사용자</a>
+                        <a href="https://about.meta.com/technologies/meta-verified/" target="_blank" alt="Meta Verified">Meta Verified</a>
+                    </div>
+                    <div>© 2023 Instagram from Hyejin</div>
+                </footer>
+            </div>
+        </div>
+
+        <script>
+            // aside.html 연결 스크립트 (임시)
+
+            async function fetchHtmlAsText(url) {
+                return await (await fetch(url)).text();
+            }
+
+            async function importPage(target, page) {
+                document.querySelector(target).innerHTML = await fetchHtmlAsText(page);
+            }
+
+            importPage(".aside", "aside.html");
+        </script>
+    </body>
+</html>
