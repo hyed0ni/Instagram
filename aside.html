@@ -60,24 +60,109 @@
 <!-- 검색 창 -->
 <div class="search-window">
     <div>
+        <h2>검색</h2>
+    </div>
+
+    <!-- 검색 입력 -->
+    <div class="input">
         <div>
-            <h1>검색</h1>
-        </div>
+            <!-- 검색 아이콘 -->
+            <div><img class="icon" src="images/icon/search.png"></div>
 
-        <!-- 검색 입력 -->
-        <div class="input">
+            <!-- 검색 내용 입력 text -->
             <div>
-                <!-- 검색 아이콘 -->
-                <div><img class="icon" src="images/icon/search.png"></div>
-
-                <!-- 검색 내용 입력 text -->
-                <form method="post">
-                    <input type="text" name="chat" id="chat" rows="1" placeholder="검색" class="text"></input>
-                </form>
-
-                <!-- 검색 내용 삭제 아이콘 -->
-                <div><img class="icon" src="images/icon/image.png" alt="이미지 아이콘"></div>
+                <input type="text" name="chat" id="chat" rows="1" placeholder="검색" class="text"></input>
             </div>
+
+            <!-- 검색 내용 삭제 아이콘 -->
+            <div><img class="icon" src="images/icon/info-full.png" alt="이미지 아이콘"></div>
+        </div>
+    </div>
+
+    <!-- 검색 목록 -->
+    <div class="search-list">
+        <!-- 검색 블록 -->
+        <a href="#">
+            <div class="search-block">
+                <!-- 검색 블록 이미지 (프로필, 아이콘) -->
+                <div class="image">
+                    <div><img src="images/profile/profile-1.jpg" alt="박지홍 프로필 이미지"></div>
+                </div>
+                
+                <!-- 검색 블록 내용 -->
+                <div class="content">
+                    <div>h.yeah_d0ni</div>
+                    <div>zeeeee_i님 외 1명이 팔로우합니다.</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="search-block">
+                <!-- 검색 블록 이미지 (프로필, 아이콘) -->
+                <div class="image">
+                    <div><img src="images/profile/studio_nectar_.jpg" alt="박지홍 프로필 이미지"></div>
+                </div>
+                
+                <!-- 검색 블록 내용 -->
+                <div class="content">
+                    <div>studio_nectar_</div>
+                    <div>망원동 사진관 • h.yeah_d0ni님 외 27명이 팔로우합니다.</div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <hr>
+
+    <!-- 최근 검색 항목 -->
+    <div class="recently">
+        <div>
+            <div>최근 검색 항목</div>
+            <div>모두 지우기</div>
+        </div>
+        
+        <!-- <div class="empty">
+            <span>최근 검색 내역 없음</span>
+        </div> -->
+
+        <div class="exist">
+            <!-- 검색 블록 -->
+            <a href="#">
+                <div class="search-block">
+                    <!-- 검색 블록 이미지 (프로필, 아이콘) -->
+                    <div class="image">
+                        <div><img src="images/profile/profile-1.jpg" alt="박지홍 프로필 이미지"></div>
+                    </div>
+                    
+                    <!-- 검색 블록 내용 -->
+                    <div class="content">
+                        <div>h.yeah_d0ni</div>
+                        <div>팔로잉</div>
+                    </div>
+
+                    <!-- 검색 블록 삭제 -->
+                    <img src="images/icon/clear.png" alt="검색 블록 삭제" class="clear">
+                </div>
+            </a>
+            
+            <a href="#">
+                <div class="search-block">
+                    <!-- 검색 블록 이미지 (프로필, 아이콘) -->
+                    <div class="image">
+                        <div><img src="images/profile/studio_nectar_.jpg" alt="박지홍 프로필 이미지"></div>
+                    </div>
+                    
+                    <!-- 검색 블록 내용 -->
+                    <div class="content">
+                        <div>studio_nectar_</div>
+                        <div>망원동 사진관 • 팔로잉</div>
+                    </div>
+
+                    <!-- 검색 블록 삭제 -->
+                    <img src="images/icon/clear.png" alt="검색 블록 삭제" class="clear">
+                </div>
+            </a>
         </div>
     </div>
 </div>

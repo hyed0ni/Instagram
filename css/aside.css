@@ -7,6 +7,7 @@
     flex-direction: column;
     flex-shrink: 0;
     position: fixed;
+    z-index: 1;
     width: 335px;
     height: 100vh;
     padding: 8px 12px 20px;
@@ -103,91 +104,167 @@
     height: 23px;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* 검색 창 */
 .aside .search-window {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 0;
-    left: 80px;
+    left: 75px;
     width: 400px;
     height: 100vh;
-    border: 2px solid red;
-    background-color: white;
+    border-right: 1px solid #f2f2f2;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-shadow: 4px 0px 24px 3px #dbdbdb;
+    background-color: #ffffff;
+}
+
+.aside .search-window > div:first-child {
+    margin: 8px 0;
+    padding: 16px 14px 32px 24px;
 }
 
 /* 검색 입력 */
-.aside .input {
+.aside .search-window .input {
     height: 64px;
-    padding: 24px 16px;
-
-    border: 1px solid blueviolet;
+    margin: 0 16px;
 }
 
-.aside .input > div {
+.aside .search-window .input > div {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 16px;
     border-radius: 8px;
     background-color: #efefef;
 }
 
+/* 검색 아이콘 */
+.aside .search-window .input > div > div:first-child {height: 16px;}
+
+.aside .search-window .input img {
+    width: 15px;
+    height: 15px;
+}
+
+.aside .search-window .input > div > div:first-child img {
+    margin-right: 12px;
+    opacity: 0.5;
+}
+
 /* 검색 내용 입력 text */
-.aside .input .text {
+.aside .search-window .input .text {
+    width: 305px;
+    height: 34px;
     border: none;
+    outline: none;
     resize: none;
     background-color: #efefef;
+    font-size: 1rem;
 }
 
+/* 검색 내용 삭제 아이콘 */
+.aside .search-window .input > div > div:last-child {
+    display: none;
+    height: 16px;
+}
 
+.aside .search-window .input > div > div:last-child img {opacity: 0.15;}
 
+/* 검색 목록 */
+.aside .search-list {display: none;}
 
-
-
-
-.message .input > div {height: 100%;}
-
-.message .input form {
+/* 검색 블록 */
+.aside .search-block {
     display: flex;
     align-items: center;
-    flex-grow: 1;
-    margin-left: 18px;
+    padding: 8px 24px;
 }
 
-.message .input textarea {
-    width: 100%;
-    height: 34px;
-    padding: 8px 9px;
-    outline: none;
+.aside .search-block:hover {background-color: #f2f2f2;}
+
+/* 검색 블록 이미지 (프로필, 아이콘) */
+.aside .search-block .image {
+    height: 44px;
+    margin-right: 12px;
 }
 
-/* 이미지 첨부, 하트 이모티콘 아이콘 */
-.message .input > div > div {
+.aside .search-block img {
+    width: 44px;
+    border-radius: 100%;
+}
+
+/* 검색 블록 내용 */
+.aside .search-block .content {flex-grow: 1;}
+
+.aside .search-block .content > div {
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.aside .search-block .content > div:first-child {font-weight: bold;}
+
+.aside .search-block .content > div:last-child {color: #737373;}
+
+.aside .search-window hr {
+    height: 1px;
+    border: 0;
+    background: #dadde1;
+}
+
+/* 최근 검색 항목 */
+.aside .recently {
     display: flex;
-    width: 40px;
-    margin: auto;
-    padding: 8px;
-    cursor: pointer;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-/* 하트 이모티콘 아이콘 */
-.message .input > div > div:last-child {margin-right: 8px;}
+.aside .recently > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 24px 8px;
+    font-weight: bold;
+}
 
+.aside .recently > div:first-child > div:first-child {font-size: 1rem;}
 
+.aside .recently > div:first-child > div:last-child {
+    font-size: 14px;
+    color: #0095f6;
+}
 
+.aside .recently .empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: bold;
+    color: #737373;
+}
 
+.aside .recently .exist {padding: 8px 0;}
 
+.aside .recently .exist .search-block {position: relative;}
 
+.aside .recently .exist .content > div {width: 250px;}
 
+/*  검색 블록 삭제 */
+.aside .recently .exist .clear {
+    position: absolute;
+    top: 14px;
+    right: 23.5px;
+    width: 16px;
+    margin: 8px;
+}
 
-
-
+/* 푸터: 더 보기 */
 .aside footer {position: relative;}
 
 /* 더 보기 창 */
