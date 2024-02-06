@@ -1,0 +1,183 @@
+/* 동일한 문서 내 모든 선택자 앞에 .post-modal 명시 */
+.post-modal {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+/*  */
+.post-modal .filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.85;
+}
+
+/* 모달 창 */
+.post-modal .modal {
+    position: absolute;
+    /* display: flex; */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 좌측 temp */
+.post-modal .photos {
+    /* width: 600px; */
+    /* background-color: aquamarine; */
+}
+
+
+
+
+
+
+
+
+/* 우측: 게시물 정보 */
+.post-modal .details {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 880px;
+    background-color: #ffffff;
+}
+
+.post-modal .details > div:not(:last-child) {border-bottom: 1px solid #efefef;}
+
+/* 헤더: 프로필 정보, 옵션 등 */
+.post-modal .details .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 14px 16px;
+}
+
+/* 프로필 정보 */
+.post-modal .details .header .profile-image {
+    display: flex;
+    align-items: center;
+}
+
+/* 프로필 이미지 */
+.post-modal .details .header .profile-image > div:first-child {
+    width: 32px;
+    height: 32px;
+}
+
+/* 아이디, 위치 */
+.post-modal .details .header .profile-image > div:last-child {margin-left: 14px;}
+
+/* 아이디 */
+.post-modal .details .header .profile-image .id {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* hover */
+.post-modal .details .hover:hover {opacity: 0.5;}
+
+/* 위치 */
+.post-modal .details .header .profile-image .location {font-size: 12px;}
+
+/* 옵션 */
+.post-modal .details .header > div:last-child {
+    padding: 8px;
+    line-height: 10px;
+}
+
+.post-modal .details .header > div:last-child img {width: 24px;}
+
+.post-modal .details .section {
+    flex-grow: 1;
+    
+    /* temp */
+    /* border: 2px solid yellow; */
+}
+
+.post-modal .details .footer {height: 115px;}
+
+/* 푸터: 게시글 반응 */
+.post-modal .details .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6px;
+}
+
+/* 좋아요, 댓글, 공유, 저장 */
+.post-modal .details .footer > div:nth-child(1) {
+    display: flex;
+    height: 40px;
+    margin-bottom: 3px;
+}
+
+.post-modal .details .footer > div:nth-child(1) > div {padding: 8px;}
+
+/* 좋아요 아이콘 이미지 */
+.post-modal .details .footer > div:nth-child(1) > div:first-child img {
+    width: 110%;
+    height: 100%;
+}
+
+/* 아이콘 이미지 */
+.post-modal .details .footer > div:nth-child(1) img {width: 24px;}
+
+/* 저장 */
+.post-modal .details .footer > div:nth-child(1) > div:last-child {margin-left: auto;}
+
+/* 좋아요 수 */
+.post-modal .details .footer > div:nth-child(2) {
+    height: 24px;
+    margin-bottom: 3px;
+    padding: 0 10px;
+}
+
+/* 굵은 폰트 표시 부분 */
+.post-modal .details .footer .bold {font-weight: bold;}
+
+/* 작성 날짜 */
+.post-modal .details .footer > div:nth-child(3) {
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.post-modal .details .comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 댓글 */
+.post-modal .details .comment {
+    height: 53px;
+    padding: 6px 16px;
+}
+
+/* 댓글 입력 textarea */
+.post-modal .details .comment > div:first-child {flex-grow: 1;}
+
+.post-modal .details .comment input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* 댓글 게시 */
+.post-modal .details .comment > div:last-child {
+    margin-left: 8px;
+    font-weight: bold;
+    color: #0095F6;
+}

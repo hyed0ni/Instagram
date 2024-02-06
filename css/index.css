@@ -1,4 +1,5 @@
 /* 동일한 문서 내 모든 선택자 앞에 .index 명시 */
+.index {position: relative;}
 
 .index .main {
     display: flex;
@@ -106,18 +107,21 @@
     height: 32px;
 }
 
-/* 아이디 */
-.index .ps .header .profile-image > div:last-child {
-    margin-left: 10px;
+/* 아이디, 위치 */
+.index .ps .header .profile-image > div:last-child {margin-left: 10px;}
+
+.index .ps .header .profile-image .id {
+    font-size: 14px;
     font-weight: bold;
 }
+
+.index .ps .header .profile-image .location {font-size: 12px;}
 
 /* 아이콘 hover */
 .index .ps .hover:hover {opacity: 0.5;}
 
 /* 옵션 */
 .index .ps .header > div:last-child {
-    width: 40px;
     padding: 8px;
     line-height: 10px;
 }
@@ -148,10 +152,10 @@
     opacity: 0.8;
 }
 
-/* 푸터: 게시글 반응, 문구, 댓글 등 */
+/* 푸터: 게시글 반응 */
 .index .ps .footer {padding: 0px 2px;}
 
-/* 게시글 반응 1: 좋아요, 댓글, 저장 등 */
+/* 좋아요, 댓글, 공유, 저장 */
 .index .ps .footer > div:nth-child(1) {
     display: flex;
     height: 40px;
@@ -159,24 +163,21 @@
     margin-bottom: 7px;
 }
 
-.index .ps .footer > div:nth-child(1) > div {
-    width: 40px;
-    padding: 8px;
-}
+.index .ps .footer > div:nth-child(1) > div {padding: 8px;}
 
+/* 좋아요 아이콘 이미지 */
 .index .ps .footer > div:nth-child(1) > div:first-child img {
     width: 110%;
     height: 100%;
 }
 
-.index .ps .footer > div:nth-child(1) img {
-    width: 24px;
-    height: 97%;
-}
+/* 아이콘 이미지 */
+.index .ps .footer > div:nth-child(1) img {width: 24px;}
 
+/* 저장 */
 .index .ps .footer > div:nth-child(1) > div:last-child {margin-left: auto;}
 
-/* 게시글 반응 2: 좋아요 수 등 */
+/* 좋아요 수 */
 .index .ps .footer > div:nth-child(2) {
     height: 18px;
     margin-bottom: 8px;

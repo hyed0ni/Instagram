@@ -29,6 +29,8 @@
         <link rel="stylesheet" href="css/common.css" type="text/css">
         <link rel="stylesheet" href="css/aside.css" type="text/css">
         <link rel="stylesheet" href="css/index.css" type="text/css">
+        <link rel="stylesheet" href="css/post.css" type="text/css">
+        <link rel="stylesheet" href="css/story.css" type="text/css">
     </head>
 
     <body>
@@ -113,8 +115,14 @@
                                         <!-- 프로필 정보 -->
                                         <div>
                                             <a class="profile-image" href="#">
+                                                <!-- 프로필 이미지 -->
                                                 <div><img src="images/profile/som_photo_.jpg" alt="솜포토 프로필 이미지"></div>
-                                                <div class="hover">som_photo_</div>
+                                                
+                                                <!-- 아이디, 위치 -->
+                                                <div>
+                                                    <div class="id hover">som_photo_</div>
+                                                    <div class="location">서빙고역</div>
+                                                </div>
                                             </a>
                                         </div>
 
@@ -132,10 +140,10 @@
                                         <div><a href="#"><img src="images/icon/person.png"></a></div>
                                     </div>
 
-                                    <!-- 푸터: 게시글 반응, 문구, 댓글 등 -->
+                                    <!-- 푸터: 게시글 반응 -->
                                     <div class="footer">
 
-                                        <!-- 게시글 반응 1: 좋아요, 댓글, 저장 등 -->
+                                        <!-- 좋아요, 댓글, 공유, 저장 -->
                                         <div>
                                             <div>
                                                 <a href="#"><img class="hover" src="images/icon/heart-full-2.png"></a>
@@ -151,18 +159,18 @@
                                             </div>
                                         </div>
 
-                                        <!-- 게시글 반응 2: 좋아요 수 등 -->
+                                        <!-- 좋아요 수 -->
                                         <div>
-                                            <div>
+                                            <!-- <div>
                                                 <a class="bold" href="#">좋아요
                                                 <span>10</span>개</a>
-                                            </div>
-                                            <!-- <div>
+                                            </div> -->
+                                            <div>
                                                 <div>
                                                     <a class="bold" href="#">jisu__tudio</a><span>님 외</span>
                                                     <a class="bold" href="#"><span>453</span>명</a>이 좋아합니다</span>
                                                 </div>
-                                            </div> -->
+                                            </div>
                                         </div>
 
                                         <!-- 게시글 문구 -->
@@ -197,7 +205,7 @@
                     <!-- 내 프로필 (프로필 이미지, 아이디, 이름) -->
                     <div class="header">
                         <a class="profile-image" href="profile.html">
-                            <div><img src="images/profile/profile-1.jpg" alt="내 프로필 이미지"></div>
+                            <div><img src="images/profile/profile-1.jpg" alt="프로필 이미지"></div>
                         </a>
 
                         <div>
@@ -301,19 +309,13 @@
                         <div>© 2023 INSTAGRAM FROM HYEJIN</div>
                     </div>
                 </div>
-
-                <!-- 게시물 모달 스케치 -->
-                <div class="a">
-                    <!-- 게시물 모달 박스 -->
-                    <div class="b box">
-                        <!-- 좌측:  -->
-                        <div class="c left"></div>
-    
-                        <!-- 우측:  -->
-                        <div class="d"></div>
-                    </div>
-                </div>
             </div>
+
+            <!-- 게시물 모달 -->
+            <div class="post-modal"></div>
+
+            <!-- 스토리 모달 -->
+            <!-- <div class="story-modal"></div> -->
         </div>
 
         <script>
@@ -331,5 +333,33 @@
         </script>
 
         <script src="js/aside.js"></script>
+
+        <script>
+            // post.html 연결 스크립트 (임시)
+            
+            async function fetchHtmlAsText(url) {
+                return await (await fetch(url)).text();
+            }
+
+            async function importPage(target, page) {
+                document.querySelector(target).innerHTML = await fetchHtmlAsText(page);
+            }
+
+            importPage(".post-modal", "post.html");
+        </script>
+
+        <script>
+            // story.html 연결 스크립트 (임시)
+            
+            async function fetchHtmlAsText(url) {
+                return await (await fetch(url)).text();
+            }
+
+            async function importPage(target, page) {
+                document.querySelector(target).innerHTML = await fetchHtmlAsText(page);
+            }
+
+            importPage(".story-modal", "story.html");
+        </script>
     </body>
 </html>
