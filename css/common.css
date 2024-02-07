@@ -1,5 +1,4 @@
 /* 공통 css */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,6 +18,70 @@ a {
     font-weight: normal;
     font-style: normal;
 }
+
+/* body container */
+.container {display: flex;}
+
+/* 프로필 이미지 */
+.profile-image > div:first-child {
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.profile-image > div:first-child::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0, .0975);
+    border-radius: 100%;
+    content: '';
+}
+
+.profile-image img {width: 100%;}
+
+/* 버튼 */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    margin-left: 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* 파란색 버튼 */
+.blue {
+    background-color: #0095f6;
+    color: white;
+}
+
+.blue:hover {background-color: #1877f2;}
+
+/* 회색 버튼 */
+.gray {
+    background-color: #EFEFEF;
+    color: black;
+}
+
+.gray:hover {background-color: #dbdbdb;}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* main */
 .main {
@@ -58,71 +121,3 @@ a {
 
 /* 푸터: 저작권 표시 */
 .main .policy div:last-child {margin: 12px 0;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* profile-image border */
-.profile-image > div:first-child {
-    position: relative;
-    border-radius: 100%;
-    overflow: hidden;
-}
-
-.profile-image > div:first-child::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    border: 1px solid rgba(0,0,0, .0975);
-    border-radius: 100%;
-    content: '';
-}
-
-.profile-image img {width: 100%;}
-
-/* button */
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 32px;
-    margin-left: 8px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-/* blue button */
-.blue {
-    background-color: #0095f6;
-    color: white;
-}
-
-.blue:hover {background-color: #1877f2;}
-
-/* gray button */
-.gray {
-    background-color: #EFEFEF;
-    color: black;
-}
-
-.gray:hover {background-color: #dbdbdb;}
-
-/* body container */
-.container {display: flex;}

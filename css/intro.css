@@ -1,0 +1,132 @@
+/* 동일한 문서 내 모든 선택자 앞에 .intro 명시 */
+
+/* temp */
+.intro article {
+    display: flex;
+    align-items: center;
+    width: 760px;
+    height: 730px;
+    margin: 32px 0;
+}
+
+.intro article > div:first-child {flex-grow: 1;}
+
+.intro article > div:first-child > div {position: relative;}
+
+.intro article > div:first-child > div > img {
+    position: absolute;
+    left: 111px;
+    bottom: 24px;
+    width: 250px;
+    height: 538.84px;
+}
+
+.intro article > div:last-child {
+    width: 350px;
+    height: 575px;
+    margin-top: 1cqmin;
+}
+
+/* 박스 테두리 */
+.intro .box {
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+}
+
+/* 로그인 */
+.intro .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 380px;
+}
+
+/* 인스타그램 로고 */
+.intro .login .i-logo {height: 100px;}
+
+.intro .login form {
+    flex-grow: 1;
+    margin-top: 5px;
+
+    border: 1px solid yellow;
+}
+
+.intro .login input {
+    width: 265px;
+    margin: 0 40px 6px 40px;
+    padding: 9px 8px 7px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fafafa;
+}
+
+/* 로그인 버튼 */
+.intro .login .button {
+    width: 268px;
+    margin: 8px 40px;
+}
+
+/* 페북으로 로그인 */
+.intro .f-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 40px;
+}
+
+.intro .f-login .f-logo {
+    width: 16px;
+    margin-right: 8px;
+}
+
+.intro .f-login span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #385185;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 회원가입 */
+.intro .join {
+    height: 40px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.intro .join a {
+    font-weight: bold;
+    color: #0095f6;
+}
+
+/* 앱 다운로드 */
+.intro .download {
+    height: 95px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.intro .download > * {padding: 11px 0;}
+
+.intro .download > div {
+    display: flex;
+    justify-content: center;
+}
+
+.intro .download img {height: 40px;}
+
+.intro .download img:first-child {margin-right: 8px;}
+
+/* transition-timing-function: ease-in; */
+/* transition-duration: 1.5s; */

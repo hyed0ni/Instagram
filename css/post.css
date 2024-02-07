@@ -56,7 +56,7 @@
 .post-modal .details > div:not(:last-child) {border-bottom: 1px solid #efefef;}
 
 /* 헤더: 프로필 정보, 옵션 등 */
-.post-modal .details .header {
+.post-modal .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,51 +65,89 @@
 }
 
 /* 프로필 정보 */
-.post-modal .details .header .profile-image {
+.post-modal .header .profile-image {
     display: flex;
     align-items: center;
 }
 
 /* 프로필 이미지 */
-.post-modal .details .header .profile-image > div:first-child {
+.post-modal .header .profile-image > div:first-child {
     width: 32px;
     height: 32px;
 }
 
 /* 아이디, 위치 */
-.post-modal .details .header .profile-image > div:last-child {margin-left: 14px;}
+.post-modal .header .profile-image > div:last-child {margin-left: 14px;}
 
 /* 아이디 */
-.post-modal .details .header .profile-image .id {
+.post-modal .header .profile-image .id {
     font-size: 14px;
     font-weight: bold;
 }
 
 /* hover */
-.post-modal .details .hover:hover {opacity: 0.5;}
+.post-modal .hover:hover {opacity: 0.5;}
 
 /* 위치 */
-.post-modal .details .header .profile-image .location {font-size: 12px;}
+.post-modal .header .profile-image .location {font-size: 12px;}
 
 /* 옵션 */
-.post-modal .details .header > div:last-child {
+.post-modal .header > div:last-child {
     padding: 8px;
     line-height: 10px;
 }
 
-.post-modal .details .header > div:last-child img {width: 24px;}
+.post-modal .header > div:last-child img {width: 24px;}
 
-.post-modal .details .section {
+
+
+
+
+
+
+
+
+
+/* 섹션: 게시물 문구, 댓글 */
+.post-modal .section {
     flex-grow: 1;
-    
-    /* temp */
-    /* border: 2px solid yellow; */
+    padding: 16px;
 }
 
-.post-modal .details .footer {height: 115px;}
+.post-modal .section .comm {
+    display: flex;
+    padding: 5px 16px 16px 0;
+}
+
+/* 섹션 프로필 이미지 */
+.post-modal .section .profile-image > div {
+    width: 32px;
+    height: 32px;
+    margin-right: 14px;
+}
+
+.post-modal .section .comm > div > a {
+    float: left;
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* 푸터: 게시글 반응 */
-.post-modal .details .footer {
+.post-modal .footer {height: 115px;}
+
+.post-modal .footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,58 +155,58 @@
 }
 
 /* 좋아요, 댓글, 공유, 저장 */
-.post-modal .details .footer > div:nth-child(1) {
+.post-modal .footer > div:nth-child(1) {
     display: flex;
     height: 40px;
     margin-bottom: 3px;
 }
 
-.post-modal .details .footer > div:nth-child(1) > div {padding: 8px;}
+.post-modal .footer > div:nth-child(1) > div {padding: 8px;}
 
 /* 좋아요 아이콘 이미지 */
-.post-modal .details .footer > div:nth-child(1) > div:first-child img {
+.post-modal .footer > div:nth-child(1) > div:first-child img {
     width: 110%;
     height: 100%;
 }
 
 /* 아이콘 이미지 */
-.post-modal .details .footer > div:nth-child(1) img {width: 24px;}
+.post-modal .footer > div:nth-child(1) img {width: 24px;}
 
 /* 저장 */
-.post-modal .details .footer > div:nth-child(1) > div:last-child {margin-left: auto;}
+.post-modal .footer > div:nth-child(1) > div:last-child {margin-left: auto;}
 
 /* 좋아요 수 */
-.post-modal .details .footer > div:nth-child(2) {
+.post-modal .footer > div:nth-child(2) {
     height: 24px;
     margin-bottom: 3px;
     padding: 0 10px;
 }
 
 /* 굵은 폰트 표시 부분 */
-.post-modal .details .footer .bold {font-weight: bold;}
+.post-modal .footer .bold {font-weight: bold;}
 
 /* 작성 날짜 */
-.post-modal .details .footer > div:nth-child(3) {
+.post-modal .footer > div:nth-child(3) {
     padding: 0 10px;
     font-size: 12px;
 }
 
-.post-modal .details .comment {
+.post-modal .write-comment {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* 댓글 */
-.post-modal .details .comment {
+/* 댓글 작성 */
+.post-modal .write-comment {
     height: 53px;
     padding: 6px 16px;
 }
 
 /* 댓글 입력 textarea */
-.post-modal .details .comment > div:first-child {flex-grow: 1;}
+.post-modal .write-comment > div:first-child {flex-grow: 1;}
 
-.post-modal .details .comment input {
+.post-modal .write-comment input {
     width: 100%;
     border: none;
     outline: none;
@@ -176,7 +214,7 @@
 }
 
 /* 댓글 게시 */
-.post-modal .details .comment > div:last-child {
+.post-modal .write-comment > div:last-child {
     margin-left: 8px;
     font-weight: bold;
     color: #0095F6;
