@@ -21,29 +21,6 @@
     /* display: flex; */
 }
 
-
-
-
-
-
-
-
-
-
-
-/* 좌측 temp */
-.post-modal .photos {
-    /* width: 600px; */
-    /* background-color: aquamarine; */
-}
-
-
-
-
-
-
-
-
 /* 우측: 게시물 정보 */
 .post-modal .details {
     display: flex;
@@ -99,15 +76,6 @@
 
 .post-modal .header > div:last-child img {width: 24px;}
 
-
-
-
-
-
-
-
-
-
 /* 섹션: 게시물 문구, 댓글 */
 .post-modal .section {
     flex-grow: 1;
@@ -132,17 +100,6 @@
     font-size: 14px;
     font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* 푸터: 게시글 반응 */
 .post-modal .footer {height: 115px;}

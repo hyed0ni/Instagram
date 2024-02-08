@@ -304,10 +304,10 @@
 .message .receive .heart {left: 0;}
 
 /* 내가 보낸 메시지 */
-.message .sent {justify-content: flex-end;}
-
-/* temp */
-.message .sent {margin-bottom: 15px;}
+.message .sent {
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
 
 .message .sent .chat {
     background-color: #3797F0;
